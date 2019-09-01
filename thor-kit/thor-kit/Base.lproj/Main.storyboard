@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EYK-gY-sqG">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ThorKit-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WorkoutsVC" customModule="thor_kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pYl-bw-ONy">
+                                <rect key="frame" x="0.0" y="166" width="375" height="646"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="WorkoutCell" rowHeight="174" id="SJO-nN-ifT" customClass="WorkoutCell" customModule="thor_kit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="174"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SJO-nN-ifT" id="13M-Uk-buD" customClass="WorkoutCell" customModule="thor_kit" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="bench" translatesAutoresizingMaskIntoConstraints="NO" id="8yF-Ae-SKL">
+                                                    <rect key="frame" x="0.0" y="10" width="375" height="152"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="375" id="UDs-vj-fv5"/>
+                                                        <constraint firstAttribute="height" constant="152" id="tOH-Bd-gvA"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chest Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEg-c6-g2L">
+                                                    <rect key="frame" x="24" y="117" width="136" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8yF-Ae-SKL" firstAttribute="top" secondItem="13M-Uk-buD" secondAttribute="top" constant="10" id="FeZ-pV-w1X"/>
+                                                <constraint firstAttribute="bottom" secondItem="8yF-Ae-SKL" secondAttribute="bottom" constant="10" id="H1g-bM-Xgk"/>
+                                                <constraint firstAttribute="trailing" secondItem="8yF-Ae-SKL" secondAttribute="trailing" id="c9h-Xi-shB"/>
+                                                <constraint firstItem="8yF-Ae-SKL" firstAttribute="leading" secondItem="13M-Uk-buD" secondAttribute="leading" id="dHB-cd-y37"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="workoutImage" destination="8yF-Ae-SKL" id="7gq-cO-V87"/>
+                                            <outlet property="workoutName" destination="EEg-c6-g2L" id="4YP-XL-ckz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workouts" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SY-mc-Hte">
+                                <rect key="frame" x="20" y="113" width="82" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="FSP-b6-PuN"/>
+                                    <constraint firstAttribute="width" constant="82" id="Gkz-3M-JWf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pYl-bw-ONy" secondAttribute="bottom" id="7Dg-nN-BsH"/>
+                            <constraint firstItem="4SY-mc-Hte" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7fc-s9-ZZB"/>
+                            <constraint firstItem="4SY-mc-Hte" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="HbD-XD-Qmf"/>
+                            <constraint firstItem="pYl-bw-ONy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Npw-fJ-6lP"/>
+                            <constraint firstItem="pYl-bw-ONy" firstAttribute="top" secondItem="4SY-mc-Hte" secondAttribute="bottom" constant="26" id="ck7-Pd-lxh"/>
+                            <constraint firstItem="pYl-bw-ONy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hjw-Dy-EUA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ThorKit" id="x8D-C2-Nub"/>
+                    <connections>
+                        <outlet property="workoutTable" destination="pYl-bw-ONy" id="6QG-2U-Z4G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080.8" y="137.4384236453202"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rud-oS-lR7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EYK-gY-sqG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NHO-Xm-itz">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.014269619396107269" blue="0.019462660885291916" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KI9-ta-Q1g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSH-yU-Ubt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bench" width="2100" height="1400"/>
+    </resources>
+</document>
